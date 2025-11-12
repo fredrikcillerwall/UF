@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Företagsnamn UF – Enkel modern webbplats</title>
+  <meta name="description" content="UF-företag – beskriv kort vad ni gör här." />
+  <meta name="theme-color" content="#0f172a" />
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Företagsnamn UF" />
+  <meta property="og:description" content="UF-företag – beskriv kort vad ni gör här." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:url" content="https://ditt-domännamn.se" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root{
+      --bg:#0b1020;      /* mörk bakgrund */
+      --panel:#111833;
+      --muted:#9aa4bf;
+      --text:#e6eaf5;
+      --brand:#3b82f6;   /* blå primär */
+      --brand-2:#14b8a6; /* turkos accent */
+      --danger:#ef4444;
+      --ok:#22c55e;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"}
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%; display:block}
+
+    /* Layout */
+    .container{max-width:var(--max); margin-inline:auto; padding:24px}
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(6px); background:rgba(11,16,32,.7); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex; align-items:center; gap:16px; justify-content:space-between}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2px}
+    .brand .logo{width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); display:grid; place-items:center; color:white; font-weight:800}
+    .nav a{opacity:.9}
+    .nav a:hover{opacity:1}
+    .nav-actions{display:flex; gap:8px; align-items:center}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:999px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:var(--text); text-decoration:none}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); border:0}
+    .btn:hover{filter:brightness(1.1)}
+
+    /* Hero */
+    .hero{padding:64px 24px}
+    .hero-inner{display:grid; grid-template-columns:1.2fr 1fr; gap:32px; align-items:center}
+    .badge{display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; letter-spacing:.3px; background:rgba(59,130,246,.15); color:#cfe3ff; border:1px solid rgba(59,130,246,.35)}
+    h1{font-size:clamp(28px,5vw,48px); line-height:1.1; margin:16px 0}
+    .lead{color:var(--muted)}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.1); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)}
+
+    /* Sektioner */
+    section{padding:40px 24px}
+    .kicker{color:var(--brand-2); font-weight:600; letter-spacing:.4px}
+    h2{font-size:clamp(22px,3.5vw,32px); margin:8px 0 16px}
+    .grid{display:grid; gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:900px){
+      .hero-inner{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+    }
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.015)); border:1px solid rgba(255,255,255,.09); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+    .price{font-size:28px; font-weight:800}
+    .muted{color:var(--muted)}
+
+    /* FAQ */
+    details{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:14px}
+    summary{cursor:pointer; font-weight:600}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(255,255,255,.08); background:#0a0f1f}
+    .footer-grid{display:grid; grid-template-columns:2fr 1fr 1fr; gap:16px}
+    @media (max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .tiny{font-size:12px; color:#9fb0cc}
+
+    /* Cookie banner */
+    .cookie{position:fixed; left:16px; right:16px; bottom:16px; background:#0e162f; border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:14px; display:none; gap:14px; box-shadow:var(--shadow)}
+    .cookie .btn{padding:8px 12px}
+
+    /* Forms */
+    input, textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.03); color:var(--text)}
+    label{font-size:14px; color:var(--muted)}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    @media (max-width:700px){.row{grid-template-columns:1fr}}
+    .note-ok{color:var(--ok)}
+    .note-danger{color:var(--danger)}
+  </style>
+</head>
+<body>
+  <header aria-label="Huvudmeny">
+    <div class="container nav">
+      <a class="brand" href="#" aria-label="Hem">
+        <div class="logo" aria-hidden="true">UF</div>
+        <span>Företagsnamn UF</span>
+      </a>
+      <nav class="nav-actions" aria-label="Snabblänkar">
+        <a href="#produkter">Produkter</a>
+        <a href="#om">Om oss</a>
+        <a href="#kontakt" class="btn">Kontakta oss</a>
+        <a href="#shop" class="btn primary">Köp nu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <span class="badge">UF 2025 • Nytt & hållbart</span>
+          <h1>Beskriv er produkt/tjänst med en tydlig, kort rubrik.</h1>
+          <p class="lead">En mening som förklarar <strong>vad ni säljer</strong>, <strong>för vem</strong> och <strong>vilket värde</strong> det skapar. Lägg gärna till något om hållbarhet eller samhällsnytta.</p>
+          <div style="display:flex; gap:10px; margin-top:16px">
+            <a class="btn primary" href="#shop">Beställ nu</a>
+            <a class="btn" href="#produkter">Se produkter</a>
+          </div>
+          <ul class="muted" style="margin-top:12px; padding-left:18px">
+            <li>Snabb leverans</li>
+            <li>Elevdrivet UF-företag</li>
+            <li>Säkra betalningar</li>
+          </ul>
+        </div>
+        <div class="hero-card">
+          <img src="hero.jpg" alt="Bild på er produkt/tjänst" />
+          <p class="tiny">Tips: byt ut <code>hero.jpg</code> till en riktig bild i samma mapp.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUKTER -->
+    <section id="produkter">
+      <div class="container">
+        <div class="kicker">Sortiment</div>
+        <h2>Våra produkter/tjänster</h2>
+        <div class="grid cols-3">
+          <article class="card" aria-labelledby="p1-title">
+            <img src="produkt1.jpg" alt="Produkt 1" />
+            <h3 id="p1-title">Produkt 1</h3>
+            <p class="muted">Kort beskrivning av produktens värde.</p>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:8px">
+              <span class="price">199 kr</span>
+              <a class="btn" href="#shop" aria-label="Köp Produkt 1">Köp</a>
+            </div>
+          </article>
+          <article class="card" aria-labelledby="p2-title">
+            <img src="produkt2.jpg" alt="Produkt 2" />
+            <h3 id="p2-title">Produkt 2</h3>
+            <p class="muted">Kort beskrivning av produktens värde.</p>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:8px">
+              <span class="price">299 kr</span>
+              <a class="btn" href="#shop" aria-label="Köp Produkt 2">Köp</a>
+            </div>
+          </article>
+          <article class="card" aria-labelledby="p3-title">
+            <img src="produkt3.jpg" alt="Produkt 3" />
+            <h3 id="p3-title">Produkt 3</h3>
+            <p class="muted">Kort beskrivning av produktens värde.</p>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:8px">
+              <span class="price">149 kr</span>
+              <a class="btn" href="#shop" aria-label="Köp Produkt 3">Köp</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OM -->
+    <section id="om">
+      <div class="container grid cols-2">
+        <div>
+          <div class="kicker">Vilka är vi?</div>
+          <h2>Om UF-företaget</h2>
+          <p>Berätta kort om vilka ni är, vilken skola ni går på, och varför ni startat företaget. Nämn gärna hållbarhet, kvalitet eller samhällsnytta om det är relevant.</p>
+          <ul class="muted">
+            <li>Skola & ort</li>
+            <li>Vision & värderingar</li>
+            <li>Hållbarhet: material, leverans, socialt</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Snabbfakta</h3>
+          <ul>
+            <li>Org: Ung Företagsamhet (UF)</li>
+            <li>E-post: <a href="mailto:kontakt@exempel.se">kontakt@exempel.se</a></li>
+            <li>Instagram: <a href="#">@dittkonto</a></li>
+            <li>Telefon: 070-123 45 67</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIS/ERBJUDANDE -->
+    <section id="shop">
+      <div class="container">
+        <div class="kicker">Köp</div>
+        <h2>Beställning</h2>
+        <div class="grid cols-2">
+          <form id="orderForm" class="card" aria-labelledby="bestall">
+            <h3 id="bestall">Lägg en beställningsförfrågan</h3>
+            <p class="muted">Detta formulär skickar ett e‑postmeddelande via din e‑postklient (mailto). Vill ni ha ett riktigt formulär med backend kan jag hjälpa er koppla ex. Formspree eller Netlify Forms.</p>
+            <div class="row">
+              <div>
+                <label for="namn">Ditt namn</label>
+                <input id="namn" required />
+              </div>
+              <div>
+                <label for="email">E‑post</label>
+                <input id="email" type="email" required />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="produkt">Produkt</label>
+                <input id="produkt" placeholder="Produkt 1" required />
+              </div>
+              <div>
+                <label for="antal">Antal</label>
+                <input id="antal" type="number" min="1" value="1" required />
+              </div>
+            </div>
+            <div>
+              <label for="meddelande">Meddelande</label>
+              <textarea id="meddelande" rows="4" placeholder="Önskemål, leverans, storlek osv."></textarea>
+            </div>
+            <div style="display:flex; gap:8px; align-items:center; margin-top:8px">
+              <button type="submit" class="btn primary">Skicka förfrågan</button>
+              <span id="formNote" class="tiny"></span>
+            </div>
+          </form>
+          <div class="card">
+            <h3>Betalning & leverans</h3>
+            <ul>
+              <li>Swish: 123 456 78 90 (lägg in ert nummer)</li>
+              <li>Leverans: upphämtning på skolan / post</li>
+              <li>Leveranstid: 3–5 arbetsdagar</li>
+              <li>Returpolicy: 14 dagar enligt distansavtalslagen</li>
+            </ul>
+            <p class="tiny">Tips: Lägg till en tydlig integritetstext hur ni hanterar personuppgifter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <div class="container">
+        <div class="kicker">Frågor & svar</div>
+        <h2>Vanliga frågor</h2>
+        <div class="grid">
+          <details>
+            <summary>Hur beställer jag?</summary>
+            <p>Fyll i formuläret ovan eller maila oss direkt. Vi bekräftar via e‑post.</p>
+          </details>
+          <details>
+            <summary>Vilka betalningsmetoder har ni?</summary>
+            <p>Standard är Swish. Vill ni ha kortbetalning kan vi lägga till Stripe i nästa steg.</p>
+          </details>
+          <details>
+            <summary>Gör ni specialbeställningar?</summary>
+            <p>Ja, skriv i meddelandefältet vad ni önskar så återkommer vi.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="brand"><div class="logo">UF</div><span>Företagsnamn UF</span></div>
+        <p class="muted">Elevdrivet företag via <strong>Ung Företagsamhet</strong>. Vi bygger produkter och erfarenheter – och lär oss företagande på vägen.</p>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>E‑post: <a href="mailto:kontakt@exempel.se">kontakt@exempel.se</a></li>
+          <li>Instagram: <a href="#">@dittkonto</a></li>
+          <li>Telefon: 070-123 45 67</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Policy</h4>
+        <ul>
+          <li><a href="#" onclick="alert('Skriv er enkla integritetspolicy i ett dokument och länka hit.'); return false;">Integritet</a></li>
+          <li><a href="#" onclick="alert('Skriv era köpvillkor och länka hit.'); return false;">Köpvillkor</a></li>
+          <li><a href="#" onclick="alert('Lägg in er cookie‑text eller ta bort bannern helt.'); return false;">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container tiny" style="padding-top:4px; padding-bottom:24px">© <span id="year"></span> Företagsnamn UF. All rights reserved.</div>
+  </footer>
+
+  <!-- Cookie banner -->
+  <div class="cookie" id="cookie">
+    <div class="tiny">Vi använder kakor för grundläggande funktioner (ingen spårning). Genom att använda sidan godkänner du detta.</div>
+    <div style="margin-left:auto; display:flex; gap:8px">
+      <button class="btn" id="cookieDecline">Avvisa</button>
+      <button class="btn primary" id="cookieAccept">Godkänn</button>
+    </div>
+  </div>
+
+  <script>
+    // År i footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Enkelt beställningsformulär via mailto
+    const form = document.getElementById('orderForm');
+    const note = document.getElementById('formNote');
+    form?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const namn = document.getElementById('namn').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const produkt = document.getElementById('produkt').value.trim();
+      const antal = document.getElementById('antal').value.trim();
+      const meddelande = document.getElementById('meddelande').value.trim();
+      const subject = encodeURIComponent(`Beställning: ${produkt} x${antal}`);
+      const body = encodeURIComponent(`Namn: ${namn}\nE‑post: ${email}\nProdukt: ${produkt}\nAntal: ${antal}\nMeddelande: ${meddelande}`);
+      const mailto = `mailto:kontakt@exempel.se?subject=${subject}&body=${body}`;
+      note.textContent = 'Öppnar e‑postklient…';
+      window.location.href = mailto;
+      setTimeout(()=> note.textContent = 'Om inget händer: maila oss direkt på kontakt@exempel.se', 1500);
+    });
+
+    // Enkel cookie‑banner (ingen spårning) – visa en gång
+    const cookieKey = 'uf-cookie-ok-v1';
+    const cookieEl = document.getElementById('cookie');
+    if(localStorage.getItem(cookieKey)!=='1'){
+      cookieEl.style.display='grid';
+    }
+    document.getElementById('cookieAccept').onclick = ()=>{ localStorage.setItem(cookieKey,'1'); cookieEl.remove(); }
+    document.getElementById('cookieDecline').onclick = ()=>{ cookieEl.remove(); }
+  </script>
+</body>
+</html>
