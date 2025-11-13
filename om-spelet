@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om spelet – RäkneResan UF</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>RäkneResan UF</h1>
+  <nav>
+    <a href="index.html">Hem</a>
+    <a href="om-spelet.html">Om spelet</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="bestall.html">Beställ</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Om spelet</h2>
+  <p>Ett fysiskt brädspel med uppgiftskort och spelplan – byggt för årskurs 4–6.</p>
+  <p>
+    <a class="btn" href="for-skolor.html">För skolor</a>
+    <a class="btn" href="for-familjen.html">För familjen</a>
+    <a class="btn" href="faq.html">Frågor & svar</a>
+  </p>
+</section>
+
+<main class="container">
+  <section class="grid grid-2">
+    <div class="card">
+      <h3>Pedagogik</h3>
+      <ul class="clean">
+        <li>Övningar enligt Skolverkets kursplan (åk 4–6).</li>
+        <li>Blandade svårighetsnivåer och problemlösning.</li>
+        <li>Spelifiering som skapar motivation och repetition.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Vad ingår?</h3>
+      <ul class="clean">
+        <li>Spelplan + pjäser + tärning</li>
+        <li>Uppgiftskort (taluppfattning, geometri, problemlösning m.m.)</li>
+        <li>Snabbstart & lärarstöd (PDF)</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>© 2025 RäkneResan UF</footer>
+</body>
+</html>
