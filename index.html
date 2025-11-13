@@ -1,126 +1,50 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RäkneResan UF</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #222;
-      background: #fdfdfd;
-      line-height: 1.6;
-    }
-    header {
-      background: #2a7de1;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 0.8rem;
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      background: linear-gradient(to right, #2a7de1, #5fa3ff);
-      color: white;
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-    .hero h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-    }
-    main {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-    }
-    section {
-      margin-bottom: 2.5rem;
-    }
-    footer {
-      background: #f3f3f3;
-      padding: 1rem 2rem;
-      text-align: center;
-      color: #666;
-      font-size: 0.9rem;
-    }
-    .btn {
-      background: white;
-      color: #2a7de1;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.2s;
-    }
-    .btn:hover {
-      background: #e9f1ff;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RäkneResan UF – Hem</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>RäkneResan UF</h1>
-    <nav>
-      <a href="#">Hem</a>
-      <a href="#">Om spelet</a>
-      <a href="#">Om oss</a>
-      <a href="#">Beställ</a>
-      <a href="#">Kontakt</a>
-    </nav>
-  </header>
+<header>
+  <h1>RäkneResan UF</h1>
+  <nav>
+    <a href="index.html">Hem</a>
+    <a href="om-spelet.html">Om spelet</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="bestall.html">Beställ</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h2>Gör matematik roligt, begripligt och engagerande!</h2>
-    <p>RäkneResan UF utvecklar ett mattespel som stärker räkneförmågan hos elever i årskurs 4–6 – på ett roligt och lärorikt sätt.</p>
-    <a href="#" class="btn">Läs mer om spelet</a>
+<section class="hero">
+  <h2>Gör matematik rolig, begriplig och engagerande!</h2>
+  <p>Vi utvecklar ett mattespel för årskurs 4–6 som stärker räkneförmåga och logiskt tänkande.</p>
+  <p><a class="btn" href="om-spelet.html">Läs mer om spelet</a></p>
+</section>
+
+<main class="container">
+  <section class="grid grid-2">
+    <div class="card">
+      <h3>Vårt syfte</h3>
+      <p>RäkneResan UF arbetar för att göra matematik mer engagerande, roligt och begripligt för elever i årskurs 4–6.</p>
+      <p>Teamet: <strong>Elsa Nilsson</strong>, <strong>Yasmine Benjari</strong>, <strong>Pontus Forsberg Selander</strong> och <strong>Oskar Cillerwall</strong>.</p>
+    </div>
+    <div class="card">
+      <h3>Vår idé</h3>
+      <p>Ett pedagogiskt brädspel för skola och hem – med uppgiftskort i olika svårighetsgrad enligt Skolverkets kursplan.</p>
+    </div>
   </section>
 
-  <main>
-    <section>
-      <h3>Vårt syfte</h3>
-      <p>RäkneResan UF arbetar för att göra matematik mer engagerande, roligt och begripligt för elever i årskurs 4–6. 
-      Företaget består av <strong>Elsa Nilsson, Yasmine Benjari, Pontus Forsberg Selander</strong> och <strong>Oskar Cillerwall</strong>.</p>
-      <p>Vi vet att matematik är ett av de ämnen som elever ofta har svårast för i skolan – och det vill vi ändra på.</p>
-    </section>
+  <section class="card">
+    <h3>Målet</h3>
+    <p>Att fler elever upplever matematik som meningsfullt och kul – vilket ökar lärande och motivation. Spelet underlättar också för lärare och vårdnadshavare att motivera och följa upp.</p>
+  </section>
+</main>
 
-    <section>
-      <h3>Vår idé</h3>
-      <p>Vår ambition är att utveckla ett pedagogiskt mattespel som kan användas både i skolor och i hemmet. 
-      Spelet syftar till att stärka elevernas räkneförmåga och logiska tänkande på ett interaktivt och stimulerande sätt, 
-      samtidigt som det underlättar för lärare och föräldrar att motivera elever i matematik.</p>
-    </section>
-
-    <section>
-      <h3>Vårt mål</h3>
-      <p>Målet med produkten är att fler elever ska uppleva matematik som roligt och meningsfullt, vilket i sin tur kan bidra till ökat lärande och motivation.</p>
-      <p>Spelet kommer att utformas som ett fysiskt brädspel med spelplan och uppgiftskort som följer <strong>Skolverkets kursplan för matematik</strong>.</p>
-    </section>
-
-    <section>
-      <h3>För föräldrar och lärare</h3>
-      <p>Spelet är inte bara för elever – det syftar också till att ge föräldrar och lärare en bättre förståelse för hur man kan motivera elever i matematik på ett positivt sätt.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 RäkneResan UF — Gymnasieelever med en passion för matematik & lärande.</p>
-  </footer>
+<footer>
+  © 2025 RäkneResan UF
+</footer>
 </body>
 </html>
