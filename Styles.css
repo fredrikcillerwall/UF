@@ -1,0 +1,22 @@
+/* Enkel, mobilanpassad design för RäkneResan UF */
+:root { --blue:#2a7de1; --blue2:#5fa3ff; --text:#222; }
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;color:var(--text);line-height:1.6;background:#fdfdfd}
+header{background:var(--blue);color:#fff;padding:1rem 1.25rem;display:flex;gap:.75rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+header h1{margin:0;font-size:1.3rem}
+nav a{color:#fff;text-decoration:none;margin:0 .6rem;font-weight:600}
+nav a:hover{text-decoration:underline}
+.hero{background:linear-gradient(90deg,var(--blue),var(--blue2));color:#fff;text-align:center;padding:3rem 1rem}
+.hero h2{margin:.2rem 0 1rem;font-size:1.8rem}
+.container{max-width:960px;margin:2rem auto;padding:0 1.25rem}
+section{margin:1.75rem 0}
+.card{background:#fff;border:1px solid #eee;border-radius:10px;padding:1rem 1.25rem}
+.grid{display:grid;gap:1rem}
+@media (min-width:720px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
+.btn{display:inline-block;background:#fff;color:var(--blue);border:2px solid #fff;border-radius:8px;padding:.55rem 1rem;font-weight:700;text-decoration:none}
+.btn:hover{background:#e9f1ff;border-color:#e9f1ff}
+footer{background:#f3f3f3;color:#666;text-align:center;padding:1rem}
+ul.clean{padding-left:1.1rem}
+.small{font-size:.95rem;color:#444}
+img.responsive{max-width:100%;height:auto;border-radius:10px}
+figure{margin:0}
