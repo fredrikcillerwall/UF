@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>För skolor – RäkneResan UF</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>RäkneResan UF</h1>
+  <nav>
+    <a href="index.html">Hem</a>
+    <a href="om-spelet.html">Om spelet</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="bestall.html">Beställ</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>För skolor</h2>
+  <p>Planerad för helklass, gruppstationer eller specialundervisning.</p>
+</section>
+
+<main class="container">
+  <section class="card">
+    <h3>Passar lärare som vill…</h3>
+    <ul class="clean">
+      <li>Variera undervisningen med spelifiering.</li>
+      <li>Träna taluppfattning, huvudräkning och resonemang.</li>
+      <li>Arbeta formativt – snabb feedback och uppföljning.</li>
+    </ul>
+    <p class="small">Tips: kombinera med exit tickets/mini-diagnoser för att mäta effekt.</p>
+  </section>
+</main>
+
+<footer>© 2025 RäkneResan UF</footer>
+</body>
+</html>
