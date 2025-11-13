@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frågor & svar – RäkneResan UF</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>RäkneResan UF</h1>
+  <nav>
+    <a href="index.html">Hem</a>
+    <a href="om-spelet.html">Om spelet</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="bestall.html">Beställ</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Frågor & svar</h2>
+</section>
+
+<main class="container">
+  <section class="card">
+    <h3>Vanliga frågor</h3>
+    <p><strong>Vilken ålder?</strong> Åk 4–6 (men funkar även för äldre som vill repetera).</p>
+    <p><strong>Hur många spelare?</strong> 2–6 per spel. I klass – kör flera stationer.</p>
+    <p><strong>Följer kursplanen?</strong> Ja, uppgifter mappas mot centralt innehåll och kunskapskrav i matematik.</p>
+  </section>
+</main>
+
+<footer>© 2025 RäkneResan UF</footer>
+</body>
+</html>
