@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teamet – RäkneResan UF</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>RäkneResan UF</h1>
+  <nav>
+    <a href="index.html">Hem</a>
+    <a href="om-spelet.html">Om spelet</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="bestall.html">Beställ</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<section class="hero"><h2>Teamet</h2></section>
+
+<main class="container grid grid-2">
+  <div class="card"><h3>Elsa Nilsson</h3><p>Produkt & pedagogik.</p></div>
+  <div class="card"><h3>Yasmine Benjari</h3><p>Design & innehåll.</p></div>
+  <div class="card"><h3>Pontus Forsberg Selander</h3><p>Spelmekanik & test.</p></div>
+  <div class="card"><h3>Oskar Cillerwall</h3><p>Projekt & kommunikation.</p></div>
+</main>
+
+<footer>© 2025 RäkneResan UF</footer>
+</body>
+</html>
